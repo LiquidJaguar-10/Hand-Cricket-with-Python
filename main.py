@@ -44,6 +44,7 @@ def playerbatting():
             print('COMPUTER IS OUT WITH A SCORE OF', computer_score)
             if computer_score < player_score:
                 print('YOU SUCCESSFULLY WIN THE GAME COMPREHENSIVELY BY', player_score - computer_score,'RUNS!')
+                break
             else:
                 print('THE MATCH IS TIED! WHAT AN END TO THE GAME!')
                 break
@@ -91,6 +92,7 @@ def computerbatting():
             print('YOU ARE OUT WITH A SCORE OF', player_score)
             if player_score < computer_score:
                 print('COMPUTER SUCCESSFULLY WINS THE GAME COMPREHENSIVELY BY', computer_score - player_score, 'RUNS!')
+                break
             else:
                 print('THE MATCH IS TIED! WHAT AN END TO THE GAME!')
                 break

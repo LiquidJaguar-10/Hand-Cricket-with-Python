@@ -115,7 +115,7 @@ else:
     print('Computer wins the toss and chooses to', computer_input)
     if computer_input == 'bat':
         print('First Innings has Started!')
-        playerbatting()
+        computerbatting()
     else:
         print('First Innings has Started!')
-        computerbatting()
+        playerbatting()

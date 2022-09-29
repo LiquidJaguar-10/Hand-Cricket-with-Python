@@ -1,12 +1,12 @@
 import random
-name = input('Enter your name')
+name = input('Enter your name: ')
 print('Welcome to hand cricket arena,', name)
 
 def playerbatting():
     player_score = 0
     while(True):
 
-        player_runs = int(input('Enter a number from 0 to 6'))
+        player_runs = int(input('Enter a number from 0 to 6: '))
         computer_bowling = random.randint(0, 6)
         if player_runs > 6:
             print('Invalid Input')
@@ -17,16 +17,16 @@ def playerbatting():
         print('Computer chose:', computer_bowling)
         if player_runs != computer_bowling:
             player_score = player_score + player_runs
-            print('Your score is', player_score)
+            print('Your score is', player_score, '\n')
         elif player_runs == computer_bowling:
-            print('You are',random.choice(['cleaned up by an outstanding yorker','caught at slip','run out','stumped by a lightning quick stumping']))
+            print('You are',random.choice(['cleaned up by an outstanding yorker','caught at slip','run out','stumped by a lightning quick stumping']), '\n')
             print('Your score is:', player_score)
             break
-    print('Computer needs', player_score + 1, 'runs to win')
+    print('Computer needs', player_score + 1, 'runs to win \n')
     print('Second Innings has Started! Now enter your numbers')
     computer_score = 0
     while(True):
-        player_bowling = int(input('Enter a number from 0 to 6'))
+        player_bowling = int(input('Enter a number from 0 to 6: '))
         computer_runs = random.randint(0, 6)
         if player_bowling > 6:
             print('Invalid Input')
@@ -36,7 +36,7 @@ def playerbatting():
             exit()
         print('Computer chose', computer_runs)
         computer_score = computer_score + computer_runs
-        print('Computer score is', computer_score)
+        print('Computer score is', computer_score, '\n')
         if computer_score > player_score:
             print('COMPUTER FINISHES THE GAME IN STYLE WITH A THUMPING W!')
             break
@@ -53,7 +53,7 @@ def computerbatting():
     computer_score = 0
     while(True):
 
-        player_bowling = int(input('Enter a number from 0 to 6'))
+        player_bowling = int(input('Enter a number from 0 to 6: '))
         computer_runs = random.randint(0, 6)
         if player_bowling > 6:
             print('Invalid Input')
@@ -64,16 +64,16 @@ def computerbatting():
         print('Computer chose:', computer_runs)
         if computer_runs != player_bowling:
             computer_score = computer_score + computer_runs
-            print('Computer\'s score is', computer_score)
+            print('Computer\'s score is', computer_score, '\n')
         elif computer_runs == player_bowling:
-            print('Computer is',random.choice(['cleaned up by an outstanding yorker','caught at slip','run out','stumped by a lightning quick stumping']))
+            print('Computer is',random.choice(['cleaned up by an outstanding yorker','caught at slip','run out','stumped by a lightning quick stumping']), '\n')
             print('Computer\'s score is:', computer_score)
             break
     print(name,'needs', computer_score + 1, 'runs to win')
     print('Second Innings has Started! Now enter your numbers')
     player_score = 0
     while(True):
-        player_runs = int(input('Enter a number from 0 to 6'))
+        player_runs = int(input('Enter a number from 0 to 6: '))
         computer_bowling = random.randint(0, 6)
         if player_runs > 6:
             print('Invalid Input')
@@ -97,11 +97,11 @@ def computerbatting():
                 print('THE MATCH IS TIED! WHAT AN END TO THE GAME!')
                 break
 
-a = input('Enter heads or tails')
+a = input('Enter heads or tails: ')
 toss = random.choice(['heads', 'tails'])
 if a == toss:
-    player_input = input('You win the toss and what do you choose to do? (bat/bowl)')
-    print('You decided to', player_input, 'first')
+    player_input = input('You win the toss and what do you choose to do? (bat/bowl): ')
+    print('You decided to', player_input, 'first \n')
     if player_input == 'bat':
         print('First Innings has Started!')
         playerbatting()
@@ -112,7 +112,7 @@ if a == toss:
         print('INVALID INPUT')
 else:
     computer_input = random.choice(['bat', 'bowl'])
-    print('Computer wins the toss and chooses to', computer_input)
+    print('Computer wins the toss and chooses to', computer_input, '\n')
     if computer_input == 'bat':
         print('First Innings has Started!')
         computerbatting()

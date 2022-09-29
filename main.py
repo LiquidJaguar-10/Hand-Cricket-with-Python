@@ -39,14 +39,14 @@ def playerbatting():
         print('Computer score is', computer_score)
         if computer_score > player_score:
             print('COMPUTER FINISHES THE GAME IN STYLE WITH A THUMPING W!')
-            exit()
+            break
         if computer_runs == player_bowling:
             print('COMPUTER IS OUT WITH A SCORE OF', computer_score)
             if computer_score < player_score:
                 print('YOU SUCCESSFULLY WIN THE GAME COMPREHENSIVELY BY', player_score - computer_score,'RUNS!')
             else:
                 print('THE MATCH IS TIED! WHAT AN END TO THE GAME!')
-                exit()
+                break
 
 def computerbatting():
     computer_score = 0
@@ -86,14 +86,14 @@ def computerbatting():
         print('Player Score is', player_score)
         if computer_score < player_score:
             print('YOU FINISH THE GAME IN STYLE WITH A THUMPING W!')
-            exit()
+            break
         if player_runs == computer_bowling:
             print('YOU ARE OUT WITH A SCORE OF', player_score)
             if player_score < computer_score:
                 print('COMPUTER SUCCESSFULLY WINS THE GAME COMPREHENSIVELY BY', computer_score - player_score, 'RUNS!')
             else:
                 print('THE MATCH IS TIED! WHAT AN END TO THE GAME!')
-                exit()
+                break
 
 a = input('Enter heads or tails')
 toss = random.choice(['heads', 'tails'])

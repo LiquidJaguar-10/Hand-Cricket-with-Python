@@ -6,12 +6,12 @@ def playerbatting():
     player_score = 0
     while(True):
 
-        player_runs = int(input('Enter a number from 1 to 6'))
-        computer_bowling = random.randint(1, 6)
+        player_runs = int(input('Enter a number from 0 to 6'))
+        computer_bowling = random.randint(0, 6)
         if player_runs > 6:
             print('Invalid Input')
             exit()
-        if player_runs < 1:
+        if player_runs < 0:
             print('Invalid Input')
             exit()
         print('Computer chose:', computer_bowling)
@@ -26,12 +26,12 @@ def playerbatting():
     print('Second Innings has Started! Now enter your numbers')
     computer_score = 0
     while(True):
-        player_bowling = int(input('Enter a number from 1 to 6'))
-        computer_runs = random.randint(1, 6)
+        player_bowling = int(input('Enter a number from 0 to 6'))
+        computer_runs = random.randint(0, 6)
         if player_bowling > 6:
             print('Invalid Input')
             exit()
-        if player_bowling < 1:
+        if player_bowling < 0:
             print('Invalid Input')
             exit()
         print('Computer chose', computer_runs)

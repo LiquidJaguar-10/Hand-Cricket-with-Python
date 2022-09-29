@@ -58,7 +58,7 @@ def computerbatting():
         if player_bowling > 6:
             print('Invalid Input')
             exit()
-        if player_bowling < 1:
+        if player_bowling < 0:
             print('Invalid Input')
             exit()
         print('Computer chose:', computer_runs)
@@ -78,7 +78,7 @@ def computerbatting():
         if player_runs > 6:
             print('Invalid Input')
             exit()
-        if player_runs < 1:
+        if player_runs < 0:
             print('Invalid Input')
             exit()
         print('You chose', player_runs)
